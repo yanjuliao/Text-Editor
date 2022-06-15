@@ -1,1 +1,3 @@
 # Text-Editor
+
+Editor de texto escrito em C# para mtrabalhar conceitos como lógica de programção, estrutura de dados como Listas, tabela hash e etc... 
