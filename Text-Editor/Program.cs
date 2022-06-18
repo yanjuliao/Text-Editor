@@ -13,7 +13,8 @@ namespace Text_Editor
         [STAThread]
         static void Main()
         {
-            //Instãncia da minha lista
+            /*
+            Instãncia da minha lista
             MinhaLista Lista = new MinhaLista();
 
             //Leitura de cada linha do dicionário
@@ -24,15 +25,17 @@ namespace Text_Editor
             {
                 byte [] valorAscii = Encoding.ASCII.GetBytes(linha);
 
-                /* Para cada valor ascii de cada letra será feita uma soma para achar o
-                 valor ascii da palavra inteira e essa soma será o elemento inserido na minha lista.*/ 
+                // Para cada valor ascii de cada letra será feita uma soma para achar o
+                 //valor ascii da palavra inteira e essa soma será o elemento inserido na minha lista.
                 foreach (var valor in valorAscii)
                 {
                     int contador = 0;
                     contador = contador + Convert.ToInt32(valor);
                     Lista.insereInicio(contador);
+                    Lista.Contains(CONTADOR)
                 }
             }
+            */
 
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();

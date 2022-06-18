@@ -34,7 +34,7 @@ namespace Text_Editor
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnImportar = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnCorrigir = new System.Windows.Forms.Button();
+            this.btnAdicionar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -76,21 +76,22 @@ namespace Text_Editor
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.btnCorrigir);
+            this.panel3.Controls.Add(this.btnAdicionar);
             this.panel3.Location = new System.Drawing.Point(12, 411);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(200, 27);
             this.panel3.TabIndex = 4;
             // 
-            // btnCorrigir
+            // btnAdicionar
             // 
-            this.btnCorrigir.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnCorrigir.Location = new System.Drawing.Point(0, 0);
-            this.btnCorrigir.Name = "btnCorrigir";
-            this.btnCorrigir.Size = new System.Drawing.Size(200, 27);
-            this.btnCorrigir.TabIndex = 0;
-            this.btnCorrigir.Text = "Corrigir";
-            this.btnCorrigir.UseVisualStyleBackColor = false;
+            this.btnAdicionar.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnAdicionar.Location = new System.Drawing.Point(0, 0);
+            this.btnAdicionar.Name = "btnAdicionar";
+            this.btnAdicionar.Size = new System.Drawing.Size(200, 27);
+            this.btnAdicionar.TabIndex = 0;
+            this.btnAdicionar.Text = "Adicionar";
+            this.btnAdicionar.UseVisualStyleBackColor = false;
+            this.btnAdicionar.Click += new System.EventHandler(this.btnAdicionar_Click);
             // 
             // frmPrincipal
             // 
@@ -123,7 +124,7 @@ namespace Text_Editor
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnImportar;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button btnCorrigir;
+        private System.Windows.Forms.Button btnAdicionar;
     }
 }
 

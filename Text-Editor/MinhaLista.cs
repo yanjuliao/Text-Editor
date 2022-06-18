@@ -48,7 +48,6 @@ namespace Text_Editor
         // Verifica se a lista contém o elemento
         public bool Contains(Object elemento)
         {
-            cabeca.setElemento(elemento);
             if (cabeca.getElemento() == null) 
             {
                 return false;
