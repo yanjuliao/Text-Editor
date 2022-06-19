@@ -5,7 +5,7 @@ namespace Text_Editor
 	public class Dicionario
 	{
 		const int INT_MAX = 2147483647;
-		private String[] palavras = { };
+		private string[] palavras = { };
 
 		public Dicionario()
         {
@@ -80,13 +80,13 @@ namespace Text_Editor
 			return false;
 		}
 
-		public String[] getPalavras()
+		public string[] getPalavras()
         {
 			return this.palavras;
 
 		}
 
-		public void setPalavras(String[] palavras)
+		public void setPalavras(string[] palavras)
         {
 			this.palavras = palavras;
         }
