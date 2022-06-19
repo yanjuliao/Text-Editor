@@ -13,6 +13,7 @@ namespace Text_Editor
 {
     public partial class frmPrincipal : Form
     {
+        const string ARQUIVO_DICIONARIO = "Dicionario.txt";
         Dicionario dicionario = new Dicionario();
         
         public frmPrincipal()
@@ -23,12 +24,17 @@ namespace Text_Editor
 
         private void btnAdicionar_Click(object sender, EventArgs e)
         {
-            String texto = Utils.sanitizar(this.txtBox.Text);
-            String[] palavras = texto.Split(" ");
-            this.AdicionarPalavrasDicionario(palavras);
+            foreach (var linha in txtBox.Lines)
+            {
+                string novaLinha = linha + ".";
+                string texto = Utils.sanitizar(novaLinha);
+                string[] palavras = texto.Split(" ");
+                AdicionarPalavrasDicionario(palavras);
+                salvarDicionario();
+            }
         }
 
-        private void AdicionarPalavrasDicionario(String[] palavras)
+        private void AdicionarPalavrasDicionario(string[] palavras)
         {
             foreach(var palavra in palavras)
             {
@@ -40,7 +46,6 @@ namespace Text_Editor
                         if (MessageBox.Show("A palavra " + "'" + palavra + "'" + " não existe no dicionário. Deseja adicioná-la?", "Dicionario", MessageBoxButtons.YesNo) == DialogResult.Yes)
                         {
                             this.dicionario.add(palavra);
-                            File.WriteAllLines("Dicionario.txt", palavras);
                         }
                     }
                 }
@@ -49,11 +54,26 @@ namespace Text_Editor
 
         private void inicialiazarDicionario()
         {
-            var linhas = File.ReadAllLines("Dicionario.txt");
+            string[] palavras = File.ReadAllLines(ARQUIVO_DICIONARIO);
+            this.dicionario.setPalavras(palavras);
+        }
 
-            foreach (var linha in linhas)
+        private void salvarDicionario()
+        {
+            File.WriteAllLines(ARQUIVO_DICIONARIO, this.dicionario.getPalavras());
+        }
+
+        private void btnImportar_Click(object sender, EventArgs e)
+        {
+            var importArquivo = new OpenFileDialog();
+            importArquivo.Filter = "txt file|*txt";
+
+            var resultado = importArquivo.ShowDialog();
+
+           if (resultado == DialogResult.OK)
             {
-                this.dicionario.add(linha);
+                string textolido = File.ReadAllText(importArquivo.FileName);
+                txtBox.Text = textolido;
             }
         }
     }

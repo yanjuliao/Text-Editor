@@ -79,5 +79,16 @@ namespace Text_Editor
 
 			return false;
 		}
+
+		public String[] getPalavras()
+        {
+			return this.palavras;
+
+		}
+
+		public void setPalavras(String[] palavras)
+        {
+			this.palavras = palavras;
+        }
 	}
 }

@@ -53,6 +53,7 @@ namespace Text_Editor
             this.txtBox.Location = new System.Drawing.Point(3, 3);
             this.txtBox.Multiline = true;
             this.txtBox.Name = "txtBox";
+            this.txtBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtBox.Size = new System.Drawing.Size(770, 358);
             this.txtBox.TabIndex = 0;
             // 
@@ -73,6 +74,7 @@ namespace Text_Editor
             this.btnImportar.TabIndex = 0;
             this.btnImportar.Text = "Importar";
             this.btnImportar.UseVisualStyleBackColor = false;
+            this.btnImportar.Click += new System.EventHandler(this.btnImportar_Click);
             // 
             // panel3
             // 
@@ -99,7 +101,7 @@ namespace Text_Editor
             this.AccessibleName = "";
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.BackColor = System.Drawing.Color.BurlyWood;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel3);
